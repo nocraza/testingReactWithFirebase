@@ -12,6 +12,12 @@ const Navigation = () => (
                 </Link>
             </li>
             <li>
+                <Link 
+                to = {ROUTES.SIGN_UP}>
+                    Sign Up
+                </Link>
+            </li>
+            <li>
 
                 <Link 
                 to = {ROUTES.LANDING}>
