@@ -13,6 +13,8 @@ import HomePage from './../Home';
 import AccountPage from './../Account';
 import AdminPage from './../Admin';
 
+import TestComponent1 from "./TestComponent1";
+
 import * as ROUTES from './../../constants/routes';
 
 const App = () => (
@@ -21,6 +23,8 @@ const App = () => (
       <Navigation />
 
       <hr />
+
+      <TestComponent1 />
 
       {/* <Route exact path={ROUTES.LANDING} component={LandingPage} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />

@@ -13,7 +13,7 @@ const applySetMessagesLimit = (state, action) => ({
     limit: action.limit
 })
 
-const messageReducer = (state, action) => {
+const messageReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'MESSAGES_SET':
             return applySetMessages(state, action)

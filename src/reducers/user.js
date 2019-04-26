@@ -15,7 +15,7 @@ const applySetUser = (state, action) => ({
     }
 })
 
-const userReducer = (state, action) => {
+const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'USERS_SET':
             return applySetUsers(state, action)
@@ -26,4 +26,4 @@ const userReducer = (state, action) => {
     }
 }
 
-return default userReducer
+export default userReducer
