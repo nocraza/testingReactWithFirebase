@@ -4,23 +4,14 @@ import * as ROUTES from './../../constants/routes'
 
 import SignOutButton from "./../SignOut";
 
-const Navigation = () => (
+const Navigation = ({authUser}) =>(
+    <div> {authUser ? <NavigationAuth /> : <NavigationNonAuth />} </div>
+)
+
+const NavigationAuth = () => (
     <div>
         <ul>
             <li>
-                <Link 
-                to = {ROUTES.SIGN_IN}>
-                    Sign In
-                </Link>
-            </li>
-            <li>
-                <Link 
-                to = {ROUTES.SIGN_UP}>
-                    Sign Up
-                </Link>
-            </li>
-            <li>
-
                 <Link 
                 to = {ROUTES.LANDING}>
                     Landing
@@ -41,10 +32,26 @@ const Navigation = () => (
                 </Link>
             </li>
             <li>
+                <SignOutButton />
+            </li>
+            
+        </ul>
+    </div>
+)
+const NavigationNonAuth = () => (
+    <div>
+        <ul>
+            <li>
+                <Link 
+                to = {ROUTES.LANDING}>
+                    Landing
+                </Link>
+            </li>
+            <li>
 
                 <Link 
-                to = {ROUTES.ADMIN}>
-                    Admin
+                to = {ROUTES.SIGN_IN}>
+                    Sign in
                 </Link>
             </li>
             <li>
