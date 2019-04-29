@@ -41,6 +41,7 @@ class SignUpFormBase extends Component {
       .then(authUser => {
         this.setState({...INITIAL_STATE})
         this.props.history.push(HOME)
+        console.log('Signed up!')
       })
       .catch(error => {
         this.setState({error})
